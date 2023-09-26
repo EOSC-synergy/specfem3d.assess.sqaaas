@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/vmont/specfem3d:
+      branch: master
+      repo: https://gitlab.com/vmont/specfem3d
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/vmont/specfem3d git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-teal-serval.sh
+        container: qc.acc_flabby-rose-ragdoll
+  QC.Doc:
+    repos:
+      gitlab.com/vmont/specfem3d find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-amaranth-cow.sh
+        container: qc.doc_smelly-pink-scorpion
+      gitlab.com/vmont/specfem3d git:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-pear-quoll.sh
+        container: qc.doc_stuffy-teal-civet
+      gitlab.com/vmont/specfem3d markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-cerulean-zebra.sh
+        container: qc.doc_geeky-cobalt-caiman
+  QC.Lic:
+    repos:
+      gitlab.com/vmont/specfem3d licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-red-bat.sh
+        container: qc.lic_sleepy-copper-monkey
+  QC.Sec:
+    repos:
+      gitlab.com/vmont/specfem3d bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-olive-dalmatian.sh
+        container: qc.sec_thirsty-smalt-anteater
+  QC.Sty:
+    repos:
+      gitlab.com/vmont/specfem3d flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-asparagus-duck.sh
+        container: qc.sty_boozy-amber-squid
+  QC.Ver:
+    repos:
+      gitlab.com/vmont/specfem3d get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-puce-wallaby.sh
+        container: qc.ver_hazy-seashell-otter
+timeout: 5400
