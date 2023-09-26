@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       gitlab.com/vmont/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-teal-serval.sh
-        container: qc.acc_flabby-rose-ragdoll
+        - /usr/bin/env sh .sqa/script.frumpy-gamboge-leopard.sh
+        container: qc.acc_lousy-blue-cow
   QC.Doc:
     repos:
       gitlab.com/vmont/specfem3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-amaranth-cow.sh
-        container: qc.doc_smelly-pink-scorpion
+        - /usr/bin/env sh .sqa/script.hilly-olivine-woodpecker.sh
+        container: qc.doc_frumpy-sangria-okapi
       gitlab.com/vmont/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-pear-quoll.sh
-        container: qc.doc_stuffy-teal-civet
+        - /usr/bin/env sh .sqa/script.bluesy-lime-cuscus.sh
+        container: qc.doc_wheezy-cornflower-cheetah
       gitlab.com/vmont/specfem3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-cerulean-zebra.sh
-        container: qc.doc_geeky-cobalt-caiman
+        - /usr/bin/env sh .sqa/script.homey-red-eagle.sh
+        container: qc.doc_goopy-firebrick-macaque
   QC.Lic:
     repos:
       gitlab.com/vmont/specfem3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-red-bat.sh
-        container: qc.lic_sleepy-copper-monkey
+        - /usr/bin/env sh .sqa/script.smelly-sangria-gar.sh
+        container: qc.lic_queasy-vermilion-guppy
   QC.Sec:
     repos:
       gitlab.com/vmont/specfem3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-olive-dalmatian.sh
-        container: qc.sec_thirsty-smalt-anteater
+        - /usr/bin/env sh .sqa/script.gloppy-jade-husky.sh
+        container: qc.sec_queasy-violet-dane
   QC.Sty:
     repos:
       gitlab.com/vmont/specfem3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-asparagus-duck.sh
-        container: qc.sty_boozy-amber-squid
+        - /usr/bin/env sh .sqa/script.scummy-orchid-forest.sh
+        container: qc.sty_ready-asparagus-chihuahua
   QC.Ver:
     repos:
       gitlab.com/vmont/specfem3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-puce-wallaby.sh
-        container: qc.ver_hazy-seashell-otter
+        - /usr/bin/env sh .sqa/script.queasy-cardinal-cassowary.sh
+        container: qc.ver_nippy-turquoise-goat
 timeout: 5400
