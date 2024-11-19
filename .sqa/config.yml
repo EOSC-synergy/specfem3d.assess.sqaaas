@@ -2,57 +2,73 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.11
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.com/vmont/specfem3d:
+    github.com/SPECFEM/specfem3d:
       branch: master
-      repo: https://gitlab.com/vmont/specfem3d
+      repo: https://github.com/SPECFEM/specfem3d
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.com/vmont/specfem3d git:
+      github.com/SPECFEM/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-gamboge-leopard.sh
-        container: qc.acc_lousy-blue-cow
+        - /usr/bin/env sh .sqa/script.snappy-ivory-otter.sh
+        container: qc.acc_scummy-pumpkin-maltese
   QC.Doc:
     repos:
-      gitlab.com/vmont/specfem3d find_doc_files.py:
+      github.com/SPECFEM/specfem3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-olivine-woodpecker.sh
-        container: qc.doc_frumpy-sangria-okapi
-      gitlab.com/vmont/specfem3d git:
+        - /usr/bin/env sh .sqa/script.cheeky-zucchini-gharial.sh
+        container: qc.doc_stealthy-razzmatazz-mandrill
+      github.com/SPECFEM/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-lime-cuscus.sh
-        container: qc.doc_wheezy-cornflower-cheetah
-      gitlab.com/vmont/specfem3d markdownlint:
+        - /usr/bin/env sh .sqa/script.queasy-goldenrod-rattlesnake.sh
+        container: qc.doc_chewy-grey-serval
+      github.com/SPECFEM/specfem3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-red-eagle.sh
-        container: qc.doc_goopy-firebrick-macaque
+        - /usr/bin/env sh .sqa/script.cloudy-lilac-eagle.sh
+        container: qc.doc_zippy-sepia-schnauzer
   QC.Lic:
     repos:
-      gitlab.com/vmont/specfem3d licensee:
+      github.com/SPECFEM/specfem3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-sangria-gar.sh
-        container: qc.lic_queasy-vermilion-guppy
+        - /usr/bin/env sh .sqa/script.boozy-sapphire-saola.sh
+        container: qc.lic_ready-salmon-wolverine
+  QC.Met:
+    repos:
+      github.com/SPECFEM/specfem3d cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-yellow-tarsier.sh
+        container: qc.met_scummy-razzmatazz-earwig
   QC.Sec:
     repos:
-      gitlab.com/vmont/specfem3d bandit:
+      github.com/SPECFEM/specfem3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-jade-husky.sh
-        container: qc.sec_queasy-violet-dane
+        - /usr/bin/env sh .sqa/script.snazzy-cerise-beaver.sh
+        container: qc.sec_dorky-zucchini-bobcat
   QC.Sty:
     repos:
-      gitlab.com/vmont/specfem3d flake8:
+      github.com/SPECFEM/specfem3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-orchid-forest.sh
-        container: qc.sty_ready-asparagus-chihuahua
+        - /usr/bin/env sh .sqa/script.flaky-coral-dolphin.sh
+        container: qc.sty_scanty-lime-mist
+      github.com/SPECFEM/specfem3d oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-blue-fish.sh
+        container: qc.sty_muzzy-malachite-seal
+  QC.Uni:
+    repos:
+      github.com/SPECFEM/specfem3d pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-magnolia-falcon.sh
+        container: qc.uni_chummy-orchid-salamander
   QC.Ver:
     repos:
-      gitlab.com/vmont/specfem3d get_git_tags.py:
+      github.com/SPECFEM/specfem3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-cardinal-cassowary.sh
-        container: qc.ver_nippy-turquoise-goat
+        - /usr/bin/env sh .sqa/script.ready-gold-oriole.sh
+        container: qc.ver_sleepy-zucchini-mist
 timeout: 5400
