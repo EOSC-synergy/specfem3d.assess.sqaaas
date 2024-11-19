@@ -15,60 +15,60 @@ sqa_criteria:
     repos:
       github.com/SPECFEM/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-ivory-otter.sh
-        container: qc.acc_scummy-pumpkin-maltese
+        - /usr/bin/env sh .sqa/script.scaly-cobalt-kiwi.sh
+        container: qc.acc_lousy-red-rhinoceros
   QC.Doc:
     repos:
       github.com/SPECFEM/specfem3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-zucchini-gharial.sh
-        container: qc.doc_stealthy-razzmatazz-mandrill
+        - /usr/bin/env sh .sqa/script.cranky-dandelion-spaniel.sh
+        container: qc.doc_wimpy-bronze-woodlouse
       github.com/SPECFEM/specfem3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-goldenrod-rattlesnake.sh
-        container: qc.doc_chewy-grey-serval
+        - /usr/bin/env sh .sqa/script.cozy-chestnut-cockroach.sh
+        container: qc.doc_breezy-cream-tzu
       github.com/SPECFEM/specfem3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-lilac-eagle.sh
-        container: qc.doc_zippy-sepia-schnauzer
+        - /usr/bin/env sh .sqa/script.gummy-persimmon-dogfish.sh
+        container: qc.doc_gummy-tangerine-corgi
   QC.Lic:
     repos:
       github.com/SPECFEM/specfem3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-sapphire-saola.sh
-        container: qc.lic_ready-salmon-wolverine
+        - /usr/bin/env sh .sqa/script.droopy-jade-drever.sh
+        container: qc.lic_frumpy-violet-cockroach
   QC.Met:
     repos:
       github.com/SPECFEM/specfem3d cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-yellow-tarsier.sh
-        container: qc.met_scummy-razzmatazz-earwig
+        - /usr/bin/env sh .sqa/script.grumpy-orange-antelope.sh
+        container: qc.met_cranky-flax-crane
   QC.Sec:
     repos:
       github.com/SPECFEM/specfem3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-cerise-beaver.sh
-        container: qc.sec_dorky-zucchini-bobcat
+        - /usr/bin/env sh .sqa/script.foggy-magnolia-sloth.sh
+        container: qc.sec_lanky-tomato-mandrill
   QC.Sty:
     repos:
       github.com/SPECFEM/specfem3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-coral-dolphin.sh
-        container: qc.sty_scanty-lime-mist
+        - /usr/bin/env sh .sqa/script.messy-champagne-opossum.sh
+        container: qc.sty_messy-peach-macaque
       github.com/SPECFEM/specfem3d oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-blue-fish.sh
-        container: qc.sty_muzzy-malachite-seal
+        - /usr/bin/env sh .sqa/script.jumpy-ruby-birman.sh
+        container: qc.sty_homey-cinnamon-raccoon
   QC.Uni:
     repos:
       github.com/SPECFEM/specfem3d pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-magnolia-falcon.sh
-        container: qc.uni_chummy-orchid-salamander
+        - /usr/bin/env sh .sqa/script.boozy-scarlet-raccoon.sh
+        container: qc.uni_sleepy-vermilion-jackal
   QC.Ver:
     repos:
       github.com/SPECFEM/specfem3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-gold-oriole.sh
-        container: qc.ver_sleepy-zucchini-mist
+        - /usr/bin/env sh .sqa/script.bumpy-red-monster.sh
+        container: qc.ver_crappy-cream-fousek
 timeout: 5400
